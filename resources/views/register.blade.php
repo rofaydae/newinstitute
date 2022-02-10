@@ -150,7 +150,7 @@
                             <div class="sec-title-inner d-inline-block">
                                 <!-- <span class="thm-clr d-block">أسئلة واستفسارات</span> -->
                                 <h2 class="mb-0">طلب التسجيل</h2>
-                                <p class="mb-0">قم بتعبئة النموذج التالي ليتم الرد عليك بأقرب فرصة باذن الله</p>
+                                <p class="mb-0">قم بتعبئة النموذج التالي ليتم الرد عليك بأقرب فرصة بإذن الله</p>
                             </div>
                         </div>
 

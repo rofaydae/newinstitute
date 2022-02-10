@@ -20,6 +20,53 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('css/color.css')}}">
+
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body{
+   background: #f6f6f6;
+}
+
+.box{
+   margin: 100px auto;
+   background: #fff;
+   border-radius: 7px;
+   box-shadow: 1px 2px 4px rgba(0,0,0,.3);
+}
+
+.box .heading{
+   background: #7800CF;
+   border-radius: 7px 7px 0px 0px;
+   padding: 10px;
+   color: #fff;
+   text-align: center;
+}
+
+.faqs{
+   padding: 0px 20px 20px;
+}
+
+::-webkit-details-marker{
+   float: right;
+   margin-top: 3px;
+}
+
+details{
+   background: #f6f6f6;
+   padding: 10px 20px;
+   border-radius: 7px;
+   margin-top: 20px;
+   font-size: 14px;
+   letter-spacing: 1px;
+   cursor: pointer;
+}
+
+details summary{
+   outline: none;
+   color: #0B0F23;
+}
+    </style>
 </head>
 
 <body>
@@ -148,7 +195,50 @@
             </div>
         </section>
 
+        <!-- <section>
+            <div class="w-100 pt-210 pb-100 position-relative" style="margin-top:-100px">
+                <div class="container text-right">
+                    <div class="faq-wrap w-100">
+                        <div class="row flex-row-reverse">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                                @foreach($faqs as $faq)
+                                @if($faq->answer)
+                                <div class="faq">
+                                    <div class="faq_question open">{!!$faq->question!!}</div>
+                                    <div class="faq_answer_container" style="display: block;">
+                                        <div class="faq_answer">{!!$faq->answer!!}</div>
+                                    </div>
+                                </div>
+                                @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
         <section>
+            <div class="w-100 pt-210 pb-100 position-relative" style="margin-top:-250px; margin-bottom:-120px">
+                <div class="container text-right">
+                    <div class="row flex-row-revers">
+                        <div class="box text-right col-md-12 col-sm-12 col-lg-12">
+                            <div class="faqs text-right">
+                                @foreach($faqs as $faq)
+                                @if($faq->answer)
+                                <details>
+                                    <summary>{!!$faq->question!!}</summary>
+                                    <p class="text text-right">{!!$faq->answer!!}</p>
+                                </details>
+                                @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section>
             <div class="w-100 pt-210 pb-100 position-relative" style="margin-top:-100px">
                 <div class="container text-right">
                     <div class="faq-wrap w-100">
@@ -171,8 +261,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-
+        </section> -->
         <!-- <section class="container mt-5 mb-5">
         <form class="contact-form text-center w-100" action="/addfaq" method="post">
                     @csrf

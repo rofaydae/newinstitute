@@ -1,0 +1,1221 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 08, 2021 at 10:18 PM
+-- Server version: 5.7.26
+-- PHP Version: 7.4.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `rofaydae_institute`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `akhbars`
+--
+
+CREATE TABLE `akhbars` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `author_picture` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author_bio` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `akhbars`
+--
+
+INSERT INTO `akhbars` (`id`, `title`, `author`, `image`, `description`, `created_at`, `updated_at`, `author_picture`, `author_email`, `author_bio`) VALUES
+(1, 'عنوان المقالة', 'م. فهد النفيسي', 'akhbars/April2021/ZjJdXOYGVq04QPB0WewF.jpg', '<p style=\"text-align: right;\">ينظر المعهد في قبول الطلبات من دون تمييز بين المذاهب الفقهية والعقدية؛ بل -وفي إطار دراسة علم مقارنة الأديان- قد يقبل الطلبة من الملل الأخرى</p>\r\n<p style=\"text-align: right;\">&nbsp;</p>', '2021-04-04 19:55:00', '2021-04-06 09:04:34', 'akhbars/April2021/CRBpwjaos3eZrdZD5GQs.jpg', 'alomariyaedu@gmail.com', 'المنسق العام');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `articles`
+--
+
+CREATE TABLE `articles` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `author_picture` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author_bio` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `articles`
+--
+
+INSERT INTO `articles` (`id`, `title`, `author`, `image`, `description`, `created_at`, `updated_at`, `author_picture`, `author_email`, `author_bio`) VALUES
+(1, 'عنوان المقالة', 'م. فهد النفيسي', 'articles/April2021/horqMPKsBDFdGiV2gsTx.jpg', '<p style=\"padding: 0px; margin: 0px 0px 20px; outline: none; list-style: none; border: 0px none; box-sizing: border-box; line-height: 2.3em; color: #333333; font-family: Tahoma, arial; font-size: 13px; text-align: right;\"><span style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none; box-sizing: border-box; font-size: 14pt;\">كل شيء نسبي في الحياة ، ومهما ساءت الأمور فليست شرا كلها ، ولن تجد الناس جميعا يجمعون على أمر واحد ، خاصة إذا تعلق الأمر بالفنون التعبيرية ودورها في تثقيف الإنسان والتعبير عن قضاياه ، ومن هذه الفنون الأدب والسينما . فما العلاقة بينهما ؟ وكيف يؤثران في شخصية الإنسان ؟</span></p>\r\n<p style=\"padding: 0px; margin: 0px 0px 20px; outline: none; list-style: none; border: 0px none; box-sizing: border-box; line-height: 2.3em; color: #333333; font-family: Tahoma, arial; font-size: 13px; text-align: right;\"><span style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none; box-sizing: border-box; font-size: 14pt;\">هذا ما يناقشه الكاتب فؤاد دوارة في النص الآتي :</span></p>\r\n<p style=\"padding: 0px; margin: 0px 0px 20px; outline: none; list-style: none; border: 0px none; box-sizing: border-box; line-height: 2.3em; color: #333333; font-family: Tahoma, arial; font-size: 13px; text-align: right;\"><span style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none; box-sizing: border-box; font-size: 14pt;\">السينما أحدث الفنون جميعا ، فعمرها يكاد لا يتجاوز السبعين عاما في حين أن الأدب من أقدم الفنون ، إن لم يكن أقدمها جميعا ، فلدينا نصوص أدبية يزيد عمرها على الأربعين قرنا ، فضلا عن المحاولات الشفاهية التي سبقتها ولم تصل إلينا . لذلك كانت للأدب تقاليده الفنية الراسخة ، ومقاييسه الجمالية المصطلح عليها ، في حين أن السينما ما زالت تفتقر إلى مثل هذه التقاليد والمقاييس .</span></p>\r\n<p style=\"padding: 0px; margin: 0px 0px 20px; outline: none; list-style: none; border: 0px none; box-sizing: border-box; line-height: 2.3em; color: #333333; font-family: Tahoma, arial; font-size: 13px; text-align: right;\"><span style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none; box-sizing: border-box; font-size: 14pt;\">ولعل غلبة العنصر الصناعي على السينما وما يترتب عليه من قيم تجارية سوقية هو السبب الرئيسي لتخلفها الفني والفكري ، ونفور عدد غير قليل من كبار الأدباء والمفكرين عنها ، فالمنتج الذي يملك وسائل الإنتاج السينمائي ويقوم بتمويله ، لا يستهدف عادة غير الربح ، ومن ثم يضع في اعتباره أولا وقبل كل شيء متطلبات السوق ، ورغبات الجماهير الضخمة ومستوى فهمها ، الذي اصطلح على أنه لا يزيد على مستوى صبي مراهق في الرابعة عشرة من عمره !</span></p>', '2021-04-04 19:12:00', '2021-04-06 08:52:14', 'articles/April2021/S8OyHPHejXOnEBZRMyg6.jpg', 'alomariyaedu@gmail.com', 'المنسق العام');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_rows`
+--
+
+CREATE TABLE `data_rows` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `data_type_id` int(10) UNSIGNED NOT NULL,
+  `field` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `display_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `required` tinyint(1) NOT NULL DEFAULT '0',
+  `browse` tinyint(1) NOT NULL DEFAULT '1',
+  `read` tinyint(1) NOT NULL DEFAULT '1',
+  `edit` tinyint(1) NOT NULL DEFAULT '1',
+  `add` tinyint(1) NOT NULL DEFAULT '1',
+  `delete` tinyint(1) NOT NULL DEFAULT '1',
+  `details` text COLLATE utf8mb4_unicode_ci,
+  `order` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `data_rows`
+--
+
+INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, `required`, `browse`, `read`, `edit`, `add`, `delete`, `details`, `order`) VALUES
+(1, 1, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
+(2, 1, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 2),
+(3, 1, 'email', 'text', 'Email', 1, 1, 1, 1, 1, 1, NULL, 3),
+(4, 1, 'password', 'password', 'Password', 1, 0, 0, 1, 1, 0, NULL, 4),
+(5, 1, 'remember_token', 'text', 'Remember Token', 0, 0, 0, 0, 0, 0, NULL, 5),
+(6, 1, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 0, 0, 0, NULL, 6),
+(7, 1, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7),
+(8, 1, 'avatar', 'image', 'Avatar', 0, 1, 1, 1, 1, 1, NULL, 8),
+(9, 1, 'user_belongsto_role_relationship', 'relationship', 'Role', 0, 1, 1, 1, 1, 0, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsTo\",\"column\":\"role_id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"roles\",\"pivot\":0}', 10),
+(10, 1, 'user_belongstomany_role_relationship', 'relationship', 'Roles', 0, 1, 1, 1, 1, 0, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"user_roles\",\"pivot\":\"1\",\"taggable\":\"0\"}', 11),
+(11, 1, 'settings', 'hidden', 'Settings', 0, 0, 0, 0, 0, 0, NULL, 12),
+(12, 2, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
+(13, 2, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 2),
+(14, 2, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
+(15, 2, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(16, 3, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
+(17, 3, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 2),
+(18, 3, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
+(19, 3, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(20, 3, 'display_name', 'text', 'Display Name', 1, 1, 1, 1, 1, 1, NULL, 5),
+(21, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, NULL, 9),
+(22, 4, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(23, 4, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(24, 4, 'author', 'text', 'Author', 0, 1, 1, 1, 1, 1, '{}', 3),
+(25, 4, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{}', 4),
+(26, 4, 'description', 'rich_text_box', 'Description', 1, 1, 1, 1, 1, 1, '{}', 5),
+(27, 4, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(28, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
+(29, 5, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(30, 5, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(31, 5, 'author', 'text', 'Author', 0, 1, 1, 1, 1, 1, '{}', 3),
+(32, 5, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{}', 4),
+(33, 5, 'description', 'rich_text_box', 'Description', 1, 1, 1, 1, 1, 1, '{}', 5),
+(34, 5, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(35, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
+(36, 6, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(37, 6, 'question', 'rich_text_box', 'Question', 1, 1, 1, 1, 1, 1, '{}', 2),
+(38, 6, 'answer', 'rich_text_box', 'Answer', 1, 1, 1, 1, 1, 1, '{}', 3),
+(39, 6, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
+(40, 6, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(41, 7, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(42, 7, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(43, 7, 'author', 'text', 'Author', 0, 1, 1, 1, 1, 1, '{}', 3),
+(44, 7, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{}', 4),
+(45, 7, 'file', 'file', 'File', 1, 1, 1, 1, 1, 1, '{}', 5),
+(46, 7, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(47, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
+(48, 8, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(49, 8, 'ar_firstName', 'text', 'Ar FirstName', 1, 1, 1, 1, 1, 1, '{}', 2),
+(50, 8, 'ar_secondName', 'text', 'Ar SecondName', 1, 1, 1, 1, 1, 1, '{}', 3),
+(51, 8, 'ar_familyName', 'text', 'Ar FamilyName', 1, 1, 1, 1, 1, 1, '{}', 4),
+(52, 8, 'en_firstName', 'text', 'En FirstName', 1, 1, 1, 1, 1, 1, '{}', 5),
+(53, 8, 'en_secondName', 'text', 'En SecondName', 1, 1, 1, 1, 1, 1, '{}', 6),
+(54, 8, 'en_familyName', 'text', 'En FamilyName', 1, 1, 1, 1, 1, 1, '{}', 7),
+(55, 8, 'birthday', 'date', 'Birthday', 1, 1, 1, 1, 1, 1, '{}', 8),
+(56, 8, 'city', 'text', 'City', 1, 1, 1, 1, 1, 1, '{}', 9),
+(57, 8, 'country', 'text', 'Country', 1, 1, 1, 1, 1, 1, '{}', 10),
+(58, 8, 'nationality', 'text', 'Nationality', 1, 1, 1, 1, 1, 1, '{}', 11),
+(59, 8, 'adress', 'text', 'Adress', 1, 1, 1, 1, 1, 1, '{}', 12),
+(60, 8, 'phone', 'text', 'Phone', 1, 1, 1, 1, 1, 1, '{}', 13),
+(61, 8, 'email', 'text', 'Email', 1, 1, 1, 1, 1, 1, '{}', 14),
+(62, 8, 'diploma', 'file', 'Diploma', 1, 1, 1, 1, 1, 1, '{}', 15),
+(64, 8, 'speciality', 'text', 'Speciality', 1, 1, 1, 1, 1, 1, '{}', 17),
+(67, 8, 'passport', 'file', 'Passport', 1, 1, 1, 1, 1, 1, '{}', 20),
+(68, 8, 'picture', 'image', 'Picture', 1, 1, 1, 1, 1, 1, '{}', 21),
+(69, 8, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 22),
+(70, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 23),
+(71, 10, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(72, 10, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 2),
+(73, 10, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{}', 3),
+(74, 10, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
+(75, 10, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(76, 8, 'diploma_country', 'text', 'Diploma Country', 1, 1, 1, 1, 1, 1, '{}', 16),
+(77, 8, 'doctorat_adress', 'text', 'Doctorat Adress', 1, 1, 1, 1, 1, 1, '{}', 18),
+(78, 8, 'doctorat_file', 'text', 'Doctorat File', 1, 1, 1, 1, 1, 1, '{}', 19),
+(79, 5, 'author_picture', 'image', 'Author Picture', 1, 1, 1, 1, 1, 1, '{}', 8),
+(80, 5, 'author_email', 'text', 'Author Email', 1, 1, 1, 1, 1, 1, '{}', 9),
+(81, 5, 'author_bio', 'text', 'Author Bio', 1, 1, 1, 1, 1, 1, '{}', 10),
+(82, 11, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(83, 11, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, '{}', 2),
+(84, 11, 'email', 'text', 'Email', 1, 1, 1, 1, 1, 1, '{}', 3),
+(85, 11, 'job', 'text', 'Job', 1, 1, 1, 1, 1, 1, '{}', 4),
+(86, 11, 'picture', 'image', 'Picture', 1, 1, 1, 1, 1, 1, '{}', 5),
+(87, 11, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(88, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
+(89, 4, 'author_picture', 'image', 'Author Picture', 1, 1, 1, 1, 1, 1, '{}', 8),
+(90, 4, 'author_email', 'text', 'Author Email', 1, 1, 1, 1, 1, 1, '{}', 9),
+(91, 4, 'author_bio', 'text', 'Author Bio', 1, 1, 1, 1, 1, 1, '{}', 10),
+(92, 10, 'description_text', 'rich_text_box', 'Description Text', 1, 1, 1, 1, 1, 1, '{}', 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_types`
+--
+
+CREATE TABLE `data_types` (
+  `id` int(22) UNSIGNED NOT NULL,
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `display_name_singular` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `display_name_plural` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `model_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `policy_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `controller` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `generate_permissions` tinyint(1) NOT NULL DEFAULT '0',
+  `server_side` tinyint(4) NOT NULL DEFAULT '0',
+  `details` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `data_types`
+--
+
+INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
+(1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2021-03-11 20:18:18', '2021-03-11 20:18:18'),
+(2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2021-03-11 20:18:18', '2021-03-11 20:18:18'),
+(3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2021-03-11 20:18:18', '2021-03-11 20:18:18'),
+(4, 'akhbars', 'akhbars', 'Akhbar', 'Akhbars', NULL, 'App\\Models\\Akhbar', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-03-11 20:22:13', '2021-04-06 09:03:17'),
+(5, 'articles', 'articles', 'Article', 'Articles', NULL, 'App\\Models\\Article', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-03-11 20:23:07', '2021-04-05 16:49:18'),
+(6, 'faqs', 'faqs', 'Faq', 'Faqs', NULL, 'App\\Models\\Faq', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-03-11 20:24:09', '2021-03-11 20:24:09'),
+(7, 'libraries', 'libraries', 'Library', 'Libraries', NULL, 'App\\Models\\Library', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-03-11 20:24:49', '2021-03-11 20:24:49'),
+(8, 'registers', 'registers', 'Register', 'Registers', NULL, 'App\\Models\\Register', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-03-11 20:27:22', '2021-03-31 20:00:44'),
+(10, 'projects', 'projects', 'Project', 'Projects', NULL, 'App\\Models\\project', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2021-03-30 16:10:35', '2021-04-06 14:48:54'),
+(11, 'teams', 'teams', 'Team', 'Teams', NULL, 'App\\Models\\Team', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-04-05 18:40:43', '2021-04-05 18:40:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `failed_jobs`
+--
+
+CREATE TABLE `failed_jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faqs`
+--
+
+CREATE TABLE `faqs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `question` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `faqs`
+--
+
+INSERT INTO `faqs` (`id`, `question`, `answer`, `created_at`, `updated_at`, `name`, `email`) VALUES
+(1, '<h4 class=\"mb-0\" dir=\"rtl\" style=\"color: #ec6932;\">لماذا تشترطون الدكتوراه ؟</h4>', '<p>نحن في هذا المعهد لا نريد أن ندرس المواد على غرار ما تفعل الجامعات، بل نأخذ المتخرجين المتمكنين لإعادة تناول ما درسوه، بكيفية تربط بين ما ينبغي ربطه، وتسد خَلة ما سبق أن أغفل، وتبين الحكم والغايات الجزئية والكلية من ذلك كله.</p>', '2021-03-21 14:22:00', '2021-04-06 20:22:27', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `libraries`
+--
+
+CREATE TABLE `libraries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `libraries`
+--
+
+INSERT INTO `libraries` (`id`, `title`, `author`, `image`, `file`, `created_at`, `updated_at`) VALUES
+(1, 'مراتب العقل والدين', 'عبد الغني العمري', 'libraries/April2021/EIZkjNLlxcfAtJyPVbaA.jpg', '[]', '2021-04-05 19:15:00', '2021-04-06 18:46:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menus`
+--
+
+CREATE TABLE `menus` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `menus`
+--
+
+INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'admin', '2021-03-11 20:18:19', '2021-03-11 20:18:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_items`
+--
+
+CREATE TABLE `menu_items` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `menu_id` int(10) UNSIGNED DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `target` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '_self',
+  `icon_class` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `order` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `route` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parameters` text COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `menu_items`
+--
+
+INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
+(1, 1, 'Dashboard', '', '_self', 'voyager-boat', '#9c9c9c', NULL, 1, '2021-03-11 20:18:19', '2021-04-07 11:45:29', 'voyager.dashboard', 'null'),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 11, '2021-03-11 20:18:19', '2021-04-07 11:41:08', 'voyager.media.index', NULL),
+(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 10, '2021-03-11 20:18:19', '2021-04-07 11:41:08', 'voyager.users.index', NULL),
+(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 9, '2021-03-11 20:18:19', '2021-04-07 11:41:10', 'voyager.roles.index', NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 12, '2021-03-11 20:18:19', '2021-04-07 11:41:08', NULL, NULL),
+(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2021-03-11 20:18:19', '2021-03-11 20:29:10', 'voyager.menus.index', NULL),
+(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2021-03-11 20:18:19', '2021-03-11 20:29:10', 'voyager.database.index', NULL),
+(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2021-03-11 20:18:19', '2021-03-11 20:29:10', 'voyager.compass.index', NULL),
+(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2021-03-11 20:18:19', '2021-03-11 20:29:10', 'voyager.bread.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 13, '2021-03-11 20:18:19', '2021-04-07 11:41:08', 'voyager.settings.index', NULL),
+(11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2021-03-11 20:18:19', '2021-03-11 20:29:10', 'voyager.hooks', NULL),
+(12, 1, 'أخبار المعهد', '', '_self', 'voyager-news', '#80ff00', NULL, 6, '2021-03-11 20:22:13', '2021-04-07 11:47:43', 'voyager.akhbars.index', 'null'),
+(13, 1, 'مقالات', '', '_self', 'voyager-documentation', '#80ff00', NULL, 4, '2021-03-11 20:23:07', '2021-04-07 11:47:38', 'voyager.articles.index', 'null'),
+(14, 1, 'سؤال وجواب', '', '_self', 'voyager-question', '#80ff00', NULL, 5, '2021-03-11 20:24:09', '2021-04-07 11:47:41', 'voyager.faqs.index', 'null'),
+(15, 1, 'المكتبة', '', '_self', 'voyager-book', '#80ff00', NULL, 3, '2021-03-11 20:24:49', '2021-04-07 11:47:35', 'voyager.libraries.index', 'null'),
+(16, 1, 'لائحة المسجلين', '', '_self', 'voyager-group', '#80ff00', NULL, 7, '2021-03-11 20:27:22', '2021-04-07 11:48:25', 'voyager.registers.index', 'null'),
+(18, 1, 'مجلس الأُمَناء', '', '_self', 'voyager-people', '#80ff00', NULL, 2, '2021-04-05 18:40:43', '2021-04-07 11:48:17', 'voyager.teams.index', 'null'),
+(19, 1, 'الاختصاصات', '', '_self', 'voyager-study', '#80ff00', NULL, 8, '2021-04-07 11:41:02', '2021-04-07 11:47:30', 'voyager.projects.index', 'null');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2014_10_12_000000_create_users_table', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 1),
+(3, '2019_08_19_000000_create_failed_jobs_table', 1),
+(4, '2021_03_11_204304_create_faqs_table', 1),
+(5, '2021_03_11_204416_create_akhbars_table', 1),
+(6, '2021_03_11_204435_create_articles_table', 1),
+(7, '2021_03_11_204555_create_libraries_table', 1),
+(8, '2021_03_11_205515_create_registers_table', 1),
+(9, '2016_01_01_000000_add_voyager_user_fields', 2),
+(10, '2016_01_01_000000_create_data_types_table', 2),
+(11, '2016_05_19_173453_create_menu_table', 2),
+(12, '2016_10_21_190000_create_roles_table', 2),
+(13, '2016_10_21_190000_create_settings_table', 2),
+(14, '2016_11_30_135954_create_permission_table', 2),
+(15, '2016_11_30_141208_create_permission_role_table', 2),
+(16, '2016_12_26_201236_data_types__add__server_side', 2),
+(17, '2017_01_13_000000_add_route_to_menu_items_table', 2),
+(18, '2017_01_14_005015_create_translations_table', 2),
+(19, '2017_01_15_000000_make_table_name_nullable_in_permissions_table', 2),
+(20, '2017_03_06_000000_add_controller_to_data_types_table', 2),
+(21, '2017_04_21_000000_add_order_to_data_rows_table', 2),
+(22, '2017_07_05_210000_add_policyname_to_data_types_table', 2),
+(23, '2017_08_05_000000_add_group_to_settings_table', 2),
+(24, '2017_11_26_013050_add_user_role_relationship', 2),
+(25, '2017_11_26_015000_create_user_roles_table', 2),
+(26, '2018_03_11_000000_add_user_settings', 2),
+(27, '2018_03_14_000000_add_details_to_data_types_table', 2),
+(28, '2018_03_16_000000_make_settings_value_nullable', 2),
+(29, '2021_03_21_154130_create_teams_table', 3),
+(30, '2021_03_30_153513_create_projects_table', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `permissions`
+--
+
+CREATE TABLE `permissions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `table_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `permissions`
+--
+
+INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`) VALUES
+(1, 'browse_admin', NULL, '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(2, 'browse_bread', NULL, '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(3, 'browse_database', NULL, '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(4, 'browse_media', NULL, '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(5, 'browse_compass', NULL, '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(6, 'browse_menus', 'menus', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(7, 'read_menus', 'menus', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(8, 'edit_menus', 'menus', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(9, 'add_menus', 'menus', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(10, 'delete_menus', 'menus', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(11, 'browse_roles', 'roles', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(12, 'read_roles', 'roles', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(13, 'edit_roles', 'roles', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(14, 'add_roles', 'roles', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(15, 'delete_roles', 'roles', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(16, 'browse_users', 'users', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(17, 'read_users', 'users', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(18, 'edit_users', 'users', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(19, 'add_users', 'users', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(20, 'delete_users', 'users', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(21, 'browse_settings', 'settings', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(22, 'read_settings', 'settings', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(23, 'edit_settings', 'settings', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(24, 'add_settings', 'settings', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(25, 'delete_settings', 'settings', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(26, 'browse_hooks', NULL, '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(27, 'browse_akhbars', 'akhbars', '2021-03-11 20:22:13', '2021-03-11 20:22:13'),
+(28, 'read_akhbars', 'akhbars', '2021-03-11 20:22:13', '2021-03-11 20:22:13'),
+(29, 'edit_akhbars', 'akhbars', '2021-03-11 20:22:13', '2021-03-11 20:22:13'),
+(30, 'add_akhbars', 'akhbars', '2021-03-11 20:22:13', '2021-03-11 20:22:13'),
+(31, 'delete_akhbars', 'akhbars', '2021-03-11 20:22:13', '2021-03-11 20:22:13'),
+(32, 'browse_articles', 'articles', '2021-03-11 20:23:07', '2021-03-11 20:23:07'),
+(33, 'read_articles', 'articles', '2021-03-11 20:23:07', '2021-03-11 20:23:07'),
+(34, 'edit_articles', 'articles', '2021-03-11 20:23:07', '2021-03-11 20:23:07'),
+(35, 'add_articles', 'articles', '2021-03-11 20:23:07', '2021-03-11 20:23:07'),
+(36, 'delete_articles', 'articles', '2021-03-11 20:23:07', '2021-03-11 20:23:07'),
+(37, 'browse_faqs', 'faqs', '2021-03-11 20:24:09', '2021-03-11 20:24:09'),
+(38, 'read_faqs', 'faqs', '2021-03-11 20:24:09', '2021-03-11 20:24:09'),
+(39, 'edit_faqs', 'faqs', '2021-03-11 20:24:09', '2021-03-11 20:24:09'),
+(40, 'add_faqs', 'faqs', '2021-03-11 20:24:09', '2021-03-11 20:24:09'),
+(41, 'delete_faqs', 'faqs', '2021-03-11 20:24:09', '2021-03-11 20:24:09'),
+(42, 'browse_libraries', 'libraries', '2021-03-11 20:24:49', '2021-03-11 20:24:49'),
+(43, 'read_libraries', 'libraries', '2021-03-11 20:24:49', '2021-03-11 20:24:49'),
+(44, 'edit_libraries', 'libraries', '2021-03-11 20:24:49', '2021-03-11 20:24:49'),
+(45, 'add_libraries', 'libraries', '2021-03-11 20:24:49', '2021-03-11 20:24:49'),
+(46, 'delete_libraries', 'libraries', '2021-03-11 20:24:49', '2021-03-11 20:24:49'),
+(47, 'browse_registers', 'registers', '2021-03-11 20:27:22', '2021-03-11 20:27:22'),
+(48, 'read_registers', 'registers', '2021-03-11 20:27:22', '2021-03-11 20:27:22'),
+(49, 'edit_registers', 'registers', '2021-03-11 20:27:22', '2021-03-11 20:27:22'),
+(50, 'add_registers', 'registers', '2021-03-11 20:27:22', '2021-03-11 20:27:22'),
+(51, 'delete_registers', 'registers', '2021-03-11 20:27:22', '2021-03-11 20:27:22'),
+(52, 'browse_projects', 'projects', '2021-03-30 16:10:35', '2021-03-30 16:10:35'),
+(53, 'read_projects', 'projects', '2021-03-30 16:10:35', '2021-03-30 16:10:35'),
+(54, 'edit_projects', 'projects', '2021-03-30 16:10:35', '2021-03-30 16:10:35'),
+(55, 'add_projects', 'projects', '2021-03-30 16:10:35', '2021-03-30 16:10:35'),
+(56, 'delete_projects', 'projects', '2021-03-30 16:10:35', '2021-03-30 16:10:35'),
+(57, 'browse_teams', 'teams', '2021-04-05 18:40:43', '2021-04-05 18:40:43'),
+(58, 'read_teams', 'teams', '2021-04-05 18:40:43', '2021-04-05 18:40:43'),
+(59, 'edit_teams', 'teams', '2021-04-05 18:40:43', '2021-04-05 18:40:43'),
+(60, 'add_teams', 'teams', '2021-04-05 18:40:43', '2021-04-05 18:40:43'),
+(61, 'delete_teams', 'teams', '2021-04-05 18:40:43', '2021-04-05 18:40:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `permission_role`
+--
+
+CREATE TABLE `permission_role` (
+  `permission_id` bigint(20) UNSIGNED NOT NULL,
+  `role_id` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `permission_role`
+--
+
+INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 5),
+(2, 1),
+(2, 2),
+(3, 1),
+(3, 2),
+(4, 1),
+(4, 2),
+(5, 1),
+(5, 2),
+(6, 1),
+(6, 2),
+(7, 1),
+(7, 2),
+(8, 1),
+(8, 2),
+(9, 1),
+(9, 2),
+(10, 1),
+(10, 2),
+(11, 1),
+(11, 2),
+(12, 1),
+(12, 2),
+(13, 1),
+(13, 2),
+(14, 1),
+(14, 2),
+(15, 1),
+(15, 2),
+(16, 1),
+(16, 2),
+(17, 1),
+(17, 2),
+(18, 1),
+(18, 2),
+(19, 1),
+(19, 2),
+(20, 1),
+(20, 2),
+(21, 1),
+(21, 2),
+(22, 1),
+(22, 2),
+(23, 1),
+(23, 2),
+(24, 1),
+(24, 2),
+(25, 1),
+(25, 2),
+(26, 1),
+(26, 2),
+(27, 1),
+(27, 2),
+(27, 3),
+(27, 5),
+(28, 1),
+(28, 2),
+(28, 3),
+(28, 5),
+(29, 1),
+(29, 2),
+(29, 3),
+(29, 5),
+(30, 1),
+(30, 2),
+(30, 3),
+(30, 5),
+(31, 1),
+(31, 2),
+(31, 3),
+(31, 5),
+(32, 1),
+(32, 2),
+(32, 3),
+(32, 5),
+(33, 1),
+(33, 2),
+(33, 3),
+(33, 5),
+(34, 1),
+(34, 2),
+(34, 3),
+(34, 5),
+(35, 1),
+(35, 2),
+(35, 3),
+(35, 5),
+(36, 1),
+(36, 2),
+(36, 3),
+(36, 5),
+(37, 1),
+(37, 2),
+(37, 3),
+(37, 5),
+(38, 1),
+(38, 2),
+(38, 3),
+(38, 5),
+(39, 1),
+(39, 2),
+(39, 3),
+(39, 5),
+(40, 1),
+(40, 2),
+(40, 3),
+(40, 5),
+(41, 1),
+(41, 2),
+(41, 3),
+(41, 5),
+(42, 1),
+(42, 2),
+(42, 3),
+(42, 5),
+(43, 1),
+(43, 2),
+(43, 3),
+(43, 5),
+(44, 1),
+(44, 2),
+(44, 3),
+(44, 5),
+(45, 1),
+(45, 2),
+(45, 3),
+(45, 5),
+(46, 1),
+(46, 2),
+(46, 3),
+(46, 5),
+(47, 1),
+(47, 2),
+(47, 3),
+(47, 5),
+(48, 1),
+(48, 2),
+(48, 3),
+(48, 5),
+(49, 1),
+(49, 2),
+(49, 3),
+(49, 5),
+(50, 1),
+(50, 2),
+(50, 3),
+(50, 5),
+(51, 1),
+(51, 2),
+(51, 3),
+(51, 5),
+(52, 1),
+(52, 2),
+(52, 3),
+(52, 5),
+(53, 1),
+(53, 2),
+(53, 3),
+(53, 5),
+(54, 1),
+(54, 2),
+(54, 3),
+(54, 5),
+(55, 1),
+(55, 2),
+(55, 3),
+(55, 5),
+(56, 1),
+(56, 2),
+(56, 3),
+(56, 5),
+(57, 1),
+(57, 3),
+(57, 5),
+(58, 1),
+(58, 3),
+(58, 5),
+(59, 1),
+(59, 3),
+(59, 5),
+(60, 1),
+(60, 3),
+(60, 5),
+(61, 1),
+(61, 3),
+(61, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
+
+CREATE TABLE `projects` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `description_text` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `title`, `image`, `created_at`, `updated_at`, `description_text`) VALUES
+(1, 'العلوم السياسية', 'projects/March2021/dvIzhcwhDjKO3fOGsKft.jpg', '2021-03-31 18:59:00', '2021-04-06 17:48:32', '<p class=\"mb-0 text-right\" dir=\"rtl\">نقصد من دراسة هذه الشعبة، أن نعود بالعلوم السياسية إلى أصلها الرباني؛ وهذا يعني تفكيكها وإعادة بنائها، على قواعد متينة، لا تعتبر الفكر البشري وحده. ويُفضل -كسائر التخصصات- أن يكون الطالب متخصصا في العلوم السياسية، وأن يختار إما مقررا لها بحسبه أو بحسب المتعارف عليه في بلده، وإما مرجعا معتبرا لدى جميع علماء السياسة، ليُمكّن المعلم والمتعلم من بلوغ الحقائق الكبرى التي ينبني عليها هذا العلم. ويتخرج الطالب في العلوم السياسية بتقديم دراسة عامة (مقرر تدريسي) أو دراسة تطبيقية تفصيلية في مجال محصور، بحسب ما يراه.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\"><span style=\"text-decoration: underline;\"><strong>ملحوظات:</strong></span></p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن لمعهد العمرية العمل بصفة استشارية لدى مختلف الدول، من دون مراعاة لتوجهاتها؛ وباعتماد أصول هذا العلم وحده.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن للهيئة الاستشارية في مجال السياسة، أن تضم طلبة راغبين في ذلك، بعد موافقة إدارة المعهد. وتعمل هذه الهيئة العلمية بحسب قوانين تستحدثها هي، بعد موافقة المشرف العام.</p>'),
+(2, 'أصول الدين (العقائد)', 'projects/April2021/8brwsv1VvIn6ZJLzrhJw.jpg', '2021-04-06 14:33:00', '2021-04-06 17:52:56', '<p class=\"mb-0 text-right\" dir=\"rtl\">هذه الشعبة خاصة بدراسة &ldquo;علم الكلام الإسلامي&rdquo;، وبتفكيكه، وإعادته إلى أصوله العلمية. وقد تفتح شعبة فرعية من هذه الشعبة، تتخصص في مقارنة الأديان. ويكون الانطلاق في هذه الدراسات دائما، من مراجع معتبرة في العقائد الإسلامية، أو من دراسة النصوص الكتابية مباشرة، فيما يعود إلى مقارنة الأديان. ويُقبل في هذه الشعبة الطلبة المسلمون وغيرهم، بشرط توافر الأهلية الإدراكية.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\"><span style=\"text-decoration: underline;\"><strong>ملحوظات:</strong></span></p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن لمعهد العمرية، أن يعمل بالتنسيق مع الجامعات الإسلامية الرسمية والخاصة؛ من أجل تكوين الأساتذة المتخصصين في تفكيك العقائد وبنائها. ومن أجل هذا الغرض يُرجى التواصل مع إدارة المعهد (الشيخ يُشرف على المعهد ولا يُديره).</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن لمن تخرج من معهد العمرية أن يعمل -إن كان أستاذا مباشرا لمهامه في جامعة ما- بعد تخرجه بتنسيق فردي بينه وبين مؤسسته التي يعمل بها، على إحداث شعبة تفكيك العقائد يُشرف عليها شخصيا. ويبقى معهد العمرية معينا له، في حال احتياجه إلى مراجعة ما أو استشارة ما؛ بصفة ودية غير ملزمة إلا أدبيا ومعنويا.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن للمعهد العمل في هذا المجال، مع إخواننا اليهود والنصارى (فرادى أو مؤسسات)، من دون إلزامهم بشيء، إلا الاحتكام إلى العلم والعقل السليم.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* تُمنح شهادة &ldquo;مقارنة الأديان&rdquo;، للطلبة المتابعين لدروس هذا العلم، بحسب ظروفهم. فالمسلمون المنطلقون من الإسلام، يختلفون عن غيرهم؛ من حيث المراجع المـُنطلَق منها، ومن حيث اللغات المعتمدة، عند توافر الترجمة.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن لشعبة مقارنة الأديان، أن تتناول الأديان غير الكتابية، أو التي تنبثق عن نبوات قديمة اندرست معالمها.</p>'),
+(3, 'الفلسفة والفكر الفلسفي عموما', 'projects/April2021/tKAhrmGZs85xbfXyTWD2.jpg', '2021-04-06 14:33:00', '2021-04-06 17:36:19', '<p class=\"mb-0 text-right\" dir=\"rtl\">يُقصد من هذه الشعبة، كشف الأصول العلمية لمختلف المقولات الفلسفية؛ وإدراك طريقة عمل العقل في أثناء التفكر. وتُدرس هذه الشعبة بطريقتيْن مختلفتيْن (بحسب اختيار الطلبة):</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">&ndash; إما باعتماد مقررات فلسفية جامعية: يُعاد تفكيكها وبناؤها، بحيث يُصبح الطالب بعد الدراسة عارفا بها من خلال معرفته بمراتب الفلاسفة العقلية.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">&ndash; وإما باختيار فيلسوف واحد، يُريد الطالب التخصص فيه: وتُتناول هنا مؤلفات يعتمدها الطالب أرضية لانطلاقه، يفككها معه الشيخ، ويُرتبها في مرتبتها اللائقة بها، بين الفلاسفة والمفكرين الآخرين.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\"><span style=\"text-decoration: underline;\"><strong>ملحوظة:</strong></span></p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* فيما يتعلق بالطريقة الأولى، تُمنح للطالب الشهادة، بالشروط نفسها التي تُمنح لدارس أصول العلم؛ وذلك بعد تقديم صياغة جديدة شخصية لمقرر الفلسفة.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* أما فيما يتعلق بالطريقة الثانية، فتُمنح شهادة خاصة، تتعلق بالفيلسوف المخصوص أو بالمؤلَّف المخصوص. وهذا يهم أصحاب التخصصات العليا من المدرسين في التعليم العالي.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يُمكن فتح باب لمحاورة فلاسفة العصر (بعد توفير المترجمين الفوريين)، من أجل بناء الجسور بين الشرق والغرب عموما.</p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: 997px; top: 172px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>'),
+(4, 'أصول العلم (شعبة مستحدثة)', 'projects/April2021/DaPBCW5bEsqMBC1ucaNN.jpg', '2021-04-06 14:34:00', '2021-04-06 17:55:26', '<p class=\"mb-0 text-right\" dir=\"rtl\">هي مجموعة دروس تتناول الحقائق العليا التي تُبنى عليها جميع العلوم، وهي أساس للعلوم الشرعية والعلوم العقلية على السواء. ارتأى الشيخ أن يجعلها منطلقا لكل عمله التجديدي، وهو يُتيحها لكل من يرى في نفسه الأهلية لاستيعابها من جميع التخصصات.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">وبعد الانتهاء من هذه الدروس، يُرجى من متابعيها العمل على صياغتها بأسلوب وبمنهجية شخصيّيْن، فإذا وافق الشيخ (المشرف العام) على العروض، تُمنح للطالب (فيما بعد الدكتوراه) شهادة من الشيخ تُثبت جدارته وأهليته. ثم بعد التخرج، يمكن للأستاذ الطالب أن يشرع في تدريس المادة، إما في معهد العمرية، وبعد التعاقد مع إدارة المعهد؛ وإما حيث هو في جامعته أو مؤسسته الخاصة في بلده؛ بحسب الرغبة والاختيار.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\"><span style=\"text-decoration: underline;\"><strong>ملحوظات:</strong></span></p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن للطالب أن يختار الدراسة، من دون ترشُّح لنيل الشهادة؛ كما يُمكنه تأخير صياغته لبرنامج الدروس بحسب رغبته، إلى الوقت الذي يجد فيه نفسه مستعدا لذلك.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن للطلبة، اللقاء فيما بينهم، خارج حصص الشيخ، من أجل تدارس معلوماتهم والتعاون فيما بينهم على ترتيبها. ويكون ذلك في الوقت الذي يختارون، بعد إخبار الإدارة؛ لتخصص لهم غرفة خاصة بهم على التطبيق المستعمل.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن للعاملين بالتدريس في معهد العمرية فيما بعد، التوصل مع الإدارة إلى صيغة تكفل لهم التعويض المادي عن جهودهم؛ أما الشيخ فإنه لا يأخذ مقابلا عن تدريسه.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* تُخصص صفحة على موقع المعهد، للإعلان عن المتخرجين في كل شعبة؛ حتى يُمنع التلاعب بالشهادات، وتوظيفها خارج حدودها. وستتابع إدارة المعهد كل من يُخل بالشروط المخوِّلة للتدريس باعتماد شهادات المعهد.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن لمن واظب على حضور دروس &ldquo;أصول العلم&rdquo;، أن يمر إلى التخصصات الأخر، كالفقه، من دون تخرج. وإن كان قد صرف نظره عن التخرج، فإنه سيحصل على شهادة حضور للدروس إن كان مواظبا عليها، وشارك في نقاشاتها. وستبقى شهادة الحضور، متاحة لكل واحد من أصحاب التخصصات الأخرى، إن تعذر عليهم نيل الشهادة الخاصة بالعلم المدروس، لسبب من الأسباب.</p>'),
+(5, 'علم الاقتصاد', 'projects/April2021/PRzrk2tLwUJw4S2lWJq3.jpg', '2021-04-06 14:34:00', '2021-04-06 18:02:40', '<p class=\"mb-0 text-right\" dir=\"rtl\">يتابع الدروس في هذه الشعبة، المتخصصون في الاقتصاد؛ وتُعتمد في هذه الشعبة المراجع المعتبرة، والتي تكون:</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">&ndash; إما عامة، تتناول أصول هذا العلم بحسب المقررات الجامعية.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">&ndash; وإما خاصة، تتناول صنفا من الاقتصاد بحسب مراجعه المعتبرة، وبحسب نظرياته.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">وكل هذا، يخضع لعمليتيْ التفكيك وإعادة البناء؛ ويحصل الطالب على شهادة التخرج بتقديم مقرر تدريسي شامل، يُمكن أن يُعتمد مستقبلا في المعهد نفسه؛ أو بتقديم دراسة نقدية لصنف من الاقتصاد مخصوص، أو لنظرية اقتصادية مخصوصة.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\"><span style=\"text-decoration: underline;\"><strong>ملحوظات:</strong></span></p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن للمتخرج إن يُنشئ شعبة جديدة في جامعته، إن حصل التوافق بينها وبينه.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن للمتخرج العمل ضمن هيئة استشارية داخل المعهد، تُنشأ بالشروط المذكورة ضمن التخصصات السابقة.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">ويمكن فيما بعد لمعهد العمرية أن يُنشئ لجانا علمية متخصصة، تقوم بالإشراف على مختلف الدراسات المتخصصة التي يقدمها كل العلماء في مجالاتهم؛ إما لنيل موافقة المعهد من أجل نشرها وتوزيعها، وإما من أجل نيل شهادة المعهد في مختلف التخصصات؛ إن سبق للمترشح دراسة أحد العلوم على يد أحد خريجي المعهد، ولكن خارج المعهد. وهذا حتى لا نحرم أحدا من الدارسين نسبة المعهد العلمية، إن توافرت الشروط.</p>'),
+(6, 'الفقه', 'projects/April2021/IDQTP581z3r6mPEed6WU.jpg', '2021-04-06 14:35:00', '2021-04-06 18:02:18', '<p class=\"mb-0 text-right\" dir=\"rtl\">ويُشترط لهذه الشعبة كغيرها، أن يكون الطالب قد أنهى دراسة &ldquo;أصول العلم&rdquo;، إما مع التخرج أو بدونه. ويُتناول الفقه في هذه الشعبة من جهة الأصول ومن جهة الأحكام الجزئية المذهبية جميعا؛ ويكون الانطلاق من مرجع يختاره الطلبة المتخصصون.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">يُطلب من المترشِّح لنيل الشهادة، أن يؤلف كتابا في الفقه مع التجديد في التبويب والاستنباط. فإن قُبل الكتاب، يُتخذ مرجعا للتدريس في معهد العمرية، مع المراجع المختلفة الأخرى. وقد يُطبع الكتاب بالاتفاق مع شركة الإنتاج والنشر المصرية &ldquo;البعث&rdquo;، التي هي تابعة للعمرية.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">يكوّن الطلبة الراغبون في ذلك، وبعد موافقة إدارة المعهد والمشرف العام، هيئة للفتوى خاصة بمعهد العمرية. يكون لهم فيها الغطاء القانوني، والصلاحية في تناول النوازل الفردية والعامة (المخصوصة بالأمة)؛ وذلك من أجل سدّ الخصاص الذي تعاني منه الأمة في هذا المجال، بعد أن أصبحت الفتوى إما خاضعة للأنظمة الحاكمة، وإما قاصرة (كما هو شأن علماء الجماعات السياسية المتأدلجة في ذلك).</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\"><span style=\"text-decoration: underline;\"><strong>ملحوظات:</strong></span></p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يرحب معهد العمرية بالطلبة من كل المذاهب الإسلامية المشهورة وغير المشهورة، ومن كل الطوائف الإسلامية؛ من دون أدنى تمييز.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يُقبل غير المسلمين من المتخصصين، الذين يعتنون بالتشريع الإسلامي؛ ويكون نيلهم للشهادة الخاصة بهم، بعد تقديم دراستهم (مقارنة أو غير مقارنة).</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يُسمح للمتخصصين في الفقه حضور دروس أصول الدين، والعكس؛ وذلك من أجل تكميل معلومات الطالب، وليُصبح أكثر أهلية للتدريس بدوره.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن قبول فقهاء أحرار (من خارج المعهد) بصفتهم أعضاء في هيئة الفتوى، ولكن بعد قبول المشرف العام لهم. وتعمل هيئة الفتوى العمرية، بحسب قوانين تستحدثها هي، ويوافق عليها المشرف العام. كما يمكن إصدار منشورات خاصة بها، تعمل على إثراء الفقه في المعاهد المتخصصة أو لدى عموم المسلمين.</p>'),
+(7, 'الفيزياء النظرية', 'projects/April2021/qZzAMmiZ8BmIG9CO6u04.jpg', '2021-04-06 14:35:00', '2021-04-06 18:01:49', '<p class=\"mb-0 text-right\" dir=\"rtl\">تتعلق هذه الشعبة بتحليل مختلف النظريات الفيزيائية، وبردها إلى الأصل العلمي الصحيح، مع العمل على المقارنة فيما بينها. ويُشترط لهذه الشعبة أن يكون الطالب متخصصا في الفيزياء، وله إلمام بالفكر والفلسفة. وتُتابع الدروس، إما انطلاقا من مرجع يراه الطالب جديرا بالتناول، وإما بتتبع اهتمامات الطالب نفسه، إن كان عالما فيزيائيا. وتُمنح شهادة التخرج في هذه الشعبة، مع الإشارة إلى صنف الدروس المتابَعة، وبعد تقديم العمل الشخصي المرشِّح للطالب.</p>\r\n<p>&nbsp;</p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\"><span style=\"text-decoration: underline;\"><strong>ملحوظات:</strong></span></p>\r\n<p class=\"mb-0 text-right\" dir=\"rtl\">* يمكن الدخول في حوار علمي مع المتخصصين (أفرادا ومؤسسات) الناطقين باللغة العربية، أو مع غيرهم، بعد توافر الترجمة.</p>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registers`
+--
+
+CREATE TABLE `registers` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `ar_firstName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ar_secondName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ar_familyName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `en_firstName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `en_secondName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `en_familyName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `birthday` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nationality` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `adress` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diploma` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diploma_country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `speciality` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `doctorat_adress` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `doctorat_file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `passport` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `picture` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `registers`
+--
+
+INSERT INTO `registers` (`id`, `ar_firstName`, `ar_secondName`, `ar_familyName`, `en_firstName`, `en_secondName`, `en_familyName`, `birthday`, `city`, `country`, `nationality`, `adress`, `phone`, `email`, `diploma`, `diploma_country`, `speciality`, `doctorat_adress`, `doctorat_file`, `passport`, `picture`, `created_at`, `updated_at`) VALUES
+(1, 'jkkjbgkvkv', 'jkkjbgkvkv', 'jkkjbgkvkv', 'jkkjbgkvkv', 'jkkjbgkvkv', 'jkkjbgkvkv', '2001-07-23 00:00:00', 'jkkjbgkvkv', 'Austria', 'jkkjbgkvkv', 'jkkjbgkvkv', '1234567890', 'rofa@gmail.com', '[{\"download_link\":\"registers\\/March2021\\/4BeP0BUf4hh5Bbh0a5Vp.jpg\",\"original_name\":\"d.jpg\"}]', 'jkkjbgkvkv', 'jkkjbgkvkv', 'jkkjbgkvkv', 'd.jpg', '[{\"download_link\":\"registers\\/March2021\\/UTguMm5D7pVAZCFNMt2z.jpg\",\"original_name\":\"d.jpg\"}]', 'registers/March2021/MZTU6ps7jssVuGU0d7XK.jpg', '2021-03-31 19:51:00', '2021-03-31 20:01:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `display_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'Administrator', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(2, 'user', 'Normal User', '2021-03-11 20:18:19', '2021-03-11 20:18:19'),
+(3, 'Institute', 'Institute', '2021-03-11 20:36:58', '2021-03-11 20:36:58'),
+(5, 'Member', 'Member', '2021-04-07 11:53:10', '2021-04-07 11:53:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+CREATE TABLE `settings` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `display_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` text COLLATE utf8mb4_unicode_ci,
+  `details` text COLLATE utf8mb4_unicode_ci,
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `order` int(11) NOT NULL DEFAULT '1',
+  `group` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`, `order`, `group`) VALUES
+(1, 'site.title', 'Site Title', 'Site Title', '', 'text', 1, 'Site'),
+(2, 'site.description', 'Site Description', 'Site Description', '', 'text', 2, 'Site'),
+(3, 'site.logo', 'Site Logo', '', '', 'image', 3, 'Site'),
+(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
+(5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
+(6, 'admin.title', 'Admin Title', 'Voyager', '', 'text', 1, 'Admin'),
+(7, 'admin.description', 'Admin Description', 'Welcome to Voyager. The Missing Admin for Laravel', '', 'text', 2, 'Admin'),
+(8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
+(9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
+(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
+(19, 'about.ab_why', 'ab why', '<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">لقد علمنا أن كثيرا من متتبعينا، لم يخرجوا برؤية واضحة، فيما يخص معهد &ldquo;العمرية&rdquo; للعلوم؛ وعرفنا أن بعضهم ما يزال يستقي المعلومات من هنا أو هناك، لتكميل التصور لديه. ونحن هنا سنبين كل ذلك على قدر ما يحتمل هذا الحيّز. وسنعرض ذلك -على عادتنا- في مجموعة نقط، ليتمكن الناظر من تبيّن ما نتكلم فيه.</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">&nbsp;</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">1. كيف نفتح معهدا علميا، والمعاهد لا يخلو منها بلد من البلدان؟&hellip; والحكمة تقتضي أن لا نفعل ذلك، إلا إن كان لدينا جديد، ولو من وجه واحد!&hellip; وهذه هي الحقيقة.. فنحن عندما رأينا أن الجامعات والمعاهد، قد نزل فيها المستوى العلمي إلى مستوى لا يليق، ووجدنا أن السياسيين ورجال المال، قد أصبحوا من &ldquo;صانعي&rdquo; السياسات التعليمية، في بلداننا المتخلفة، بما أوصلنا إلى هذا الحضيض؛ فإننا قصدنا إلى تجديد عام لمختلف العلوم، نعمل فيه مع المتخصصين الذين يشاركوننا الهم والرؤية، على إعادة العلوم إلى نصابها، من جهة؛ وعلى تخليصها من الجهل المختلط بها، من جهة أخرى. وذلك لأن العلم لو كان خالصا، لا يخالطه جهل، ما كان ليصير سببا من أسباب التخلف لدينا. ولا نظن أحدا يكابر في هذا!&hellip;</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">&nbsp;</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">2. إن العلوم الدينية نفسها، والتي كان يُفترض أن تكون مستنقذة للعقل البشري من سفالته (من السفل)، قد انحرفت منذ القرون الأولى، وعندما صُيّرت عقلية بحتا؛ مع أن العقل مجاله محدود جدا في الدين، ولا يعدو شطرا من علم استنباط الأحكام (الفقه). وهذا يعني أن العلم في أصله رباني، يؤتيه الله لمن يشاء من عباده، وليس متاحا لكل من طلبه. وعندما يقول الله تعالى -مثلا- في القرآن: {بَلْ هُوَ آيَاتٌ بَيِّنَاتٌ فِي صُدُورِ الَّذِينَ أُوتُوا الْعِلْمَ وَمَا يَجْحَدُ بِآيَاتِنَا إِلَّا الظَّالِمُونَ} [العنكبوت: 49]، فينبغي أن يؤخذ الكلام بحرفيته؛ لا أن يُنزل من مرتبة الصدور إلى مرتبة الفكر، التي يقول الله عنها في موضع آخر: {كَلَّا إِنَّهُ كَانَ لِآيَاتِنَا عَنِيدًا . سَأُرْهِقُهُ صَعُودًا . إِنَّهُ فَكَّرَ وَقَدَّرَ . فَقُتِلَ كَيْفَ قَدَّرَ . ثُمَّ قُتِلَ كَيْفَ قَدَّرَ . ثُمَّ نَظَرَ . ثُمَّ عَبَسَ وَبَسَرَ . ثُمَّ أَدْبَرَ وَاسْتَكْبَرَ . فَقَالَ إِنْ هَذَا إِلَّا سِحْرٌ يُؤْثَرُ . إِنْ هَذَا إِلَّا قَوْلُ الْبَشَرِ . سَأُصْلِيهِ سَقَرَ . وَمَا أَدْرَاكَ مَا سَقَرُ . لَا تُبْقِي وَلَا تَذَرُ . لَوَّاحَةٌ لِلْبَشَرِ . عَلَيْهَا تِسْعَةَ عَشَرَ} [المدثر: 16 &ndash; 30]. ولهذا السبب الذي نقول، أصبح الأميون من أمتنا أكثر إيمانا -بلا ريب- من &ldquo;علمائنا&rdquo; الذين خرجوا عن الصراط المستقيم علميا، قبل أن يخرجوا عنه عمليا.</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">&nbsp;</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">3. إن الفقه الذي يظنه الناس عملا عقليا، ينطلق من النصوص؛ ليس كذلك إلا في شطر منه؛ ويبقى الشطر الأول والأصلي كشفيا، يكون نتيجة الإيمان وعمل الصالحات. يقول الله تعالى في هذا المعنى: {إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ يَهْدِيهِمْ رَبُّهُمْ بِإِيمَانِهِمْ} [يونس: 9]؛ والهداية علم غير عقلي. ثم يقول سبحانه: {إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَأَخْبَتُوا إِلَى رَبِّهِمْ أُولَئِكَ أَصْحَابُ الْجَنَّةِ هُمْ فِيهَا خَالِدُونَ . مَثَلُ الْفَرِيقَيْنِ كَالْأَعْمَى وَالْأَصَمِّ وَالْبَصِيرِ وَالسَّمِيعِ هَلْ يَسْتَوِيَانِ مَثَلًا أَفَلَا تَذَكَّرُونَ} [هود: 23، 24]؛ فجعل الله الذين آمنوا وعملوا الصالحات مبصرين وسامعين بالنتيجة، في مقابل من بقي على عماه وصممه. والإبصار والسمع تعلُّقان علميان بالمسموعات وبالمبصَرات. وهذا، من أخص ما يكون من العلم؛ وليس معنى مجازيا كما تفهم العامة. ثم يقول تعالى: {رَسُولًا يَتْلُو عَلَيْكُمْ آيَاتِ اللَّهِ مُبَيِّنَاتٍ لِيُخْرِجَ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ مِنَ الظُّلُمَاتِ إِلَى النُّورِ} [الطلاق: 11]؛ فالخروج من ظلمات الجهل، إلى نور العلم، لا يكون إلا باتباع النبي صلى الله عليه وآله وسلم، بفرعيْه: الإيمان والعمل الصالح. ثم إن هذا الإخراج من الظلمات، هو من الرسول المتبوع صلى الله عليه وآله وسلم، وليس تعمُّلا من العقول، كما يتوهم الجاهلون. والعلم الذي سماه الله نورا، يختلف في حقيقته عن العلم الذي يتعلق به \"المتعالمون\" من منحرفي التديّن منّا. وذلك لأن النور من حقيقته الكشف، فيكون بهذا العلم، خاصية كاشفة -بإذن الله- للمعلومات؛ لا جمعا تراكميا لها، يكون أحيانا تلفيقا وإلحاقا على غير هدى، لا بد فيه من الخلط والالتباس. وحتى يُدرك الناس معنى العلم، فعليهم أن يعلموا أنه في الأصل صفة إلهية؛ والله يتنزه علمه عما وصفنا من علم المتعالمين، الذي لا يعدو مرتبة الظنيّة في الحقيقة.</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">&nbsp;</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">4. ومن الخلط الذي وقع فيه علماء الدين لدينا، جعلهم فقه أئمة الفقه أعلى ما يكون من العلم؛ وهذا غلط بيّن. وذلك لأن علم أئمة الفقه، لم يتجاوز ما يتعلق بمرتبة الإسلام وحدها (المرتبة الأولى من الدين)، من جهة؛ ومن جهة أخرى فإنه لا يتنزه عن نيل العقل له من طريق الاستدلال (بداءة أو تعلُّما). وهذا الصنف من العلم، ليس هو العلم في أعلى مراتبه وإن تعلق الأمر فيه بالأحكام؛ بل هو من الرخصة التي رخص بها الله لمن ليس من أهل النور (الكشف) من علماء الأحكام فحسب. يقول الله تعالى: {فَلَوْلَا نَفَرَ مِنْ كُلِّ فِرْقَةٍ مِنْهُمْ طَائِفَةٌ لِيَتَفَقَّهُوا فِي الدِّينِ وَلِيُنْذِرُوا قَوْمَهُمْ إِذَا رَجَعُوا إِلَيْهِمْ لَعَلَّهُمْ يَحْذَرُونَ} [التوبة: 122]؛ والتفقُّه هنا تعلّم بالطريقة المعهودة لدى الفقهاء في الاصطلاح، وليس تلقيا عن الله، بالمعنى الأعلى. ثم يقول الله تعالى: {وَلَوْ رَدُّوهُ إِلَى الرَّسُولِ وَإِلَى أُولِي الْأَمْرِ مِنْهُمْ لَعَلِمَهُ الَّذِينَ يَسْتَنْبِطُونَهُ مِنْهُمْ} [النساء: 83]؛ وهذا الاستنباط، عمل عقلي أيضا، ينزل عن مرتبة الكشف الإلهي المذكور آنفا. وإن نحن عدنا إلى الأئمة الأربعة المعلومين لدى أهل السنة، فإننا سنجدهم من أعلى مرتبة للمستنبطين، بسبب علو مرتبتهم العقلية وصفاء أذهانهم من جهة؛ وبسبب كونهم على كشف خاص بهم (يختلف عن كشف العارفين وأدنى منه)، يهتدون به إلى ما لا تتمكن عقولهم من بلوغه من الأحكام، من جهة أخرى. وأصحاب هذه الخصيصة، من كل زمان، هم وحدهم من يُنسبون إلى الاجتهاد، لا كما يفهم الناس بحسب مُدرَكهم. وأما أمثال جعفر الصادق عليه السلام من أئمة الدين، لا من أئمة الفقه فحسب، فهم من أهل النور، لا من أهل الرخصة الاستنباطية. فإن علمنا هذا، فلنعلم الآن، أن الشريعة -بحسب علم النبي صلى الله عليه وآله وسلم فيها- لا ساحل لها؛ ولا ينبغي أن تُحصر في فهم إمام أو فقيه، مهما بلغ فيها من العلم؛ لأن ذلك سيُقيّدها من جهة، وسيجعلها متوقفة عن العطاء من جهة أخرى، في بعض الأزمنة كزماننا، الذي أصبح فيه المتعالمون عالة على الأولين.</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">&nbsp;</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">5. كل ما سبق لنا ذكره، فهو يستند إلى الدين الذي هو الطريق الأصلي إلى الحق والحقيقة؛ وأما النازلون عن هذه المرتبة، والذين جعلوا العلم عقليا (فلاسفة وغيرهم)، فإننا -معهد العمرية- سنعمل على إعانتهم على إعادة ما يسمونه علما أو معرفة (وهو غير ذلك) إلى أصوله، على نور؛ حتى يتخلصوا من الظلمة (جنس الظلمات الوارد ذكرها في القرآن) التي تخالطه، ولا بد. ونقول \"ولا بد\"، لأن العمل العقلي لا بد أن تخالطه الظلمة، التي يستصحبها من أصله (أصل العقل). ومن هذا الباب، نحن نعمل مع أهل الفلسفة على تفكيكها وإعادة بنائها. ويتبع أهل الفلسفة من هذا الوجه، أهل الكلام؛ لكونهم من المتفلسفين داخل الدين، كما نقول دائما. وعلمهم -هم أيضا- لا يخلو من ظلمة مصاحبة، سنعمل مع أهله، على تمييز النور من الظلمة فيه. كل هذا لا ليصيروا علماء مساوين لأهل النور الرباني، وهذا أمر غير متاح إلا من طريقه؛ ولكن لنخلصهم بإذن الله من الظلمات التي قد تخرج بهم جزئيا أو كليا عن الصراط المستقيم، كما هو عند الله؛ لا كما يتوهمه المتوهمون.</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">&nbsp;</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">6. وقد استحدثنا بإذن الله علما سميناه &ldquo;أصول العلم&rdquo;، نشترط دراسته على كل الطلبة لدينا، على اختلاف تخصصاتهم؛ لأننا نريد أن نعيد أهل العلوم الدينية وأصحاب العلوم العقلية جميعا، إلى أصل واحد؛ يجهلون وجوده، وبالتالي يجهلون إمكان التواصل علميا فيما بينهم. وإن هذا العلم جعلناه دروسا معدودة، تتناول الحقائق الأولى، بداية من الوجود المطلق والعدم بشطريْه. وإن كل &ldquo;عالم&rdquo; لا يحسن هذا العلم، فإنه سيظل قاصرا في تخصصه، مهما بلغ في المرتبة لدى الناس عموما، أو لدى المجتمعات العلمية خصوصا.</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">&nbsp;</p>\r\n<p class=\"mb-4 text-right\" dir=\"rtl\" style=\"font-size: 1.50rem; line-height: 2.60rem;\">7. إن من يُدرك ما أشرنا إليه من أصول في كل كلامنا، سيعلم مُنطلقنا في الدعوة إلى مجاوزة المؤسسات الرسمية المختلفة في بلداننا العربية الإسلامية على الخصوص. وذلك لأن هذه المؤسسات، لم تعد تخرّج علماء بالمعنى الأصلي للكلمة، بقدر ما تخرّج محترفي علم؛ العلم عندهم، بضاعة ينبغي أن تُستثمر وأن يُترزّق منها، من دون اعتبار لحقيقة معلومهم من علمهم. ونعني أنه بالنظر إلى الفقهاء مثلا، لا أحد يسأل عن مدى إسعاف الفقه للناس في حياتهم اليومية وفي أعمارهم كلها. فصرنا نتيجةً لهذا الوضع المنحرف، منشئين لكنيسة إسلامية وإكليروس إسلامي فحسب؛ ليس همهما أخذ المسلمين على المحجة البيضاء؛ ولكن مفاوضة الحكام الداخليين، والقوى العالمية الخارجية، على ما ينفعهما في دنياهما فقط؛ وهو ما زاد من انحراف الدين. ونعني أن الدين بعد أن انحرف عند جهل بعض علمائه لمصدره، فقد صار شأنا سياسيا داخليا وخارجيا، لا صلة له بأصله، إلا ما يُحافَظ عليه من وشيجة متزايدة الانحلال بالوحي، أو من طقوس جوفاء يُدفع الناس إلى الإتيان بها، بطريقة آلية منقطعة عن الأصل. ونحن بإنشائنا، لهذا المعهد العلمي، إنما ندعو أولي النهى، الذين أدركوا أن علمهم ليس علما صحيحا كله؛ وأنه لا يبلِّغهم الغاية منه في الدنيا والآخرة؛ هذا إن لم يعد وبالا عليهم في الدنيا والآخرة، كما هو معلوم. وهذا يعني، أننا لا نخاطب أشباه العلماء، الذين هم فرحون بما بلغوا من المكانة الاجتماعية، أو المكانة الوظيفية؛ أو بما يجعلهم مؤهلين لخدمة الأنظمة الحاكمة في بلدانهم. فهؤلاء أقل من أن يُخاطَبوا. نعم، نحن نعلم أن ما نقوم به يمكن أن يُعد \"ثورة علمية\"، تقلب الأوضاع العقلية لدى أمتنا رأسا على عقب؛ أو على الأصح تعيدها إلى الأصل، ما دامت مقلوبة الآن. ونحن نعي أن العقل العربي جبان، رُبِّي على ذلك؛ حتى يكون منصاعا لطغاة الداخل وطغاة الخارج. لذلك فلا ننتظر أن تلتحق بنا جموع المنتسبين إلى العلم؛ ولكن ننتظر طليعة مؤهلة لما ذكرنا، قد ضاقت ذرعا بالانحطاط الذي وصلنا إليه؛ لتكون مبلغة عنا لمن وراءها من العلماء والناس عموما. بارك الله في الجميع، ووفق علماءنا لما ينفعهم عند ربهم في الدنيا والآخرة...</p>', NULL, 'rich_text_box', 14, 'about'),
+(20, 'home.text_slide_1', 'text_slide_1', '', NULL, 'rich_text_box', 15, 'Home'),
+(21, 'home.text_slide_2', 'text_slide_2', '', NULL, 'rich_text_box', 16, 'Home'),
+(22, 'home.text_slide_3', 'text_slide_3', '', NULL, 'rich_text_box', 17, 'Home');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teams`
+--
+
+CREATE TABLE `teams` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `picture` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`id`, `name`, `email`, `job`, `picture`, `created_at`, `updated_at`) VALUES
+(1, 'م. فهد النفيسي', 'faniso@gmail.com', 'المنسق العام', 'teams/April2021/qWGNtPuOZfwYZtm1mOrG.jpg', '2021-04-05 18:42:00', '2021-04-07 19:47:51'),
+(2, 'أ.د. ساعد الخميسي', 'khemici.saad@gmail.com', 'مدير المعهد', 'teams/April2021/xUxgYq9zB2Wz63cn7PaM.jpg', '2021-04-05 18:43:28', '2021-04-05 18:43:28'),
+(3, 'د. محمد مقياس', 'mmekias@gmail.com', 'عضو مجلس الأمناء', 'teams/April2021/S720HMxF64nXXgXxUKXN.jpg', '2021-04-05 18:49:00', '2021-04-08 15:20:36'),
+(4, 'م. باسل نصري', 'baselnasri@gmail.com', 'عضو مجلس الأمناء', 'teams/April2021/zHzDpmgulyHV6KYUnd7m.jpg', '2021-04-05 18:50:09', '2021-04-05 18:50:09'),
+(5, 'أ. أبو بكر السماسي', 'boubakarsamassi@gmail.com', 'عضو مجلس الأمناء', 'teams/April2021/F4qXE3Pk8N0UduhQ7QiV.jpg', '2021-04-05 18:53:00', '2021-04-07 19:48:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `translations`
+--
+
+CREATE TABLE `translations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `table_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `column_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foreign_key` int(10) UNSIGNED NOT NULL,
+  `locale` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `role_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'users/default.png',
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `settings` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Rofaydae', 'Rofaydae.t@gmail.com', 'users/default.png', NULL, '$2y$10$krrb/T69WvI/sZnvzsR1su1qKfKbN8VMULhXw.enkilx4JwRg2Px6', NULL, '{\"locale\":\"en\"}', '2021-03-11 20:19:17', '2021-04-07 11:57:21'),
+(3, 5, 'الشيخ عبد الغني العمري الحسني', 'abdelrhaniomari@gmail.com', 'users/April2021/1VLKGlg4iSedxm0clqQo.jpg', NULL, '$2y$10$mJzhP.Hl046IODk8tSC/yeYi0pqzLbn3baV3LdLGhO0ps0EMPc84.', NULL, '{\"locale\":\"en\"}', '2021-04-07 11:56:39', '2021-04-07 19:50:03'),
+(4, 5, 'م. فهد النفيسي', 'faniso@gmail.com', 'users/April2021/PpKEhoL7oR1xkrRDYOgA.png', NULL, '$2y$10$/ync060Td7OPz6rfPe.Gv.FJCEUXdDwbdykiE6wUTfpXcIzdy2wbm', NULL, '{\"locale\":\"en\"}', '2021-04-07 11:59:21', '2021-04-07 19:49:26'),
+(5, 5, 'أ.د. ساعد الخميسي', 'khemici.saad@gmail.com', 'users/April2021/ye3KuF7tR2OUqWZq4H8Y.jpg', NULL, '$2y$10$ary20bvMna5rG6cXuIGbGuVySe.b5sEdhUrRNsph3S4k/jnRugUIm', NULL, '{\"locale\":\"en\"}', '2021-04-07 12:00:45', '2021-04-07 12:00:45'),
+(6, 5, 'د. محمد مقياس', 'mmekias@gmail.com', 'users/April2021/8IqIcaNg1XzXgkqZmYXX.jpg', NULL, '$2y$10$REtSC6jGlHQ0QD4zi2OMZ.Qm7b3Bd0ZJAM5MwPo6Q1q/cNqBmIXK.', NULL, '{\"locale\":\"en\"}', '2021-04-07 12:01:22', '2021-04-07 12:01:22'),
+(7, 5, 'م. باسل نصري', 'baselnasri@gmail.com', 'users/April2021/jfH17Pt6zvWonqanXhxa.jpg', NULL, '$2y$10$CNKOqN5T4KtUhMPKseRP3OyFcc/cnjc0zl/U3x98an9BQ2sTv5hgS', NULL, '{\"locale\":\"en\"}', '2021-04-07 12:01:58', '2021-04-07 12:01:58'),
+(8, 5, 'أ. أبو بكر السماسي', 'boubakarsamassi@gmail.com', 'users/April2021/0i4mAWkb6UvjxK0z6gtO.jpg', NULL, '$2y$10$Pt8q3HcozMLO1gHDnVgLZeHdh.e5Fy3wzhscYRUzZEsDpNlv.Bxk.', NULL, '{\"locale\":\"en\"}', '2021-04-07 12:02:42', '2021-04-07 19:49:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_roles`
+--
+
+CREATE TABLE `user_roles` (
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `role_id` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `user_roles`
+--
+
+INSERT INTO `user_roles` (`user_id`, `role_id`) VALUES
+(3, 5),
+(4, 5),
+(5, 5),
+(6, 5),
+(7, 5),
+(8, 5);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `akhbars`
+--
+ALTER TABLE `akhbars`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `articles`
+--
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `data_rows`
+--
+ALTER TABLE `data_rows`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `data_rows_data_type_id_foreign` (`data_type_id`);
+
+--
+-- Indexes for table `data_types`
+--
+ALTER TABLE `data_types`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `data_types_name_unique` (`name`),
+  ADD UNIQUE KEY `data_types_slug_unique` (`slug`);
+
+--
+-- Indexes for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `faqs`
+--
+ALTER TABLE `faqs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `libraries`
+--
+ALTER TABLE `libraries`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `menus`
+--
+ALTER TABLE `menus`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `menus_name_unique` (`name`);
+
+--
+-- Indexes for table `menu_items`
+--
+ALTER TABLE `menu_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `menu_items_menu_id_foreign` (`menu_id`);
+
+--
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indexes for table `permissions`
+--
+ALTER TABLE `permissions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `permissions_key_index` (`key`);
+
+--
+-- Indexes for table `permission_role`
+--
+ALTER TABLE `permission_role`
+  ADD PRIMARY KEY (`permission_id`,`role_id`),
+  ADD KEY `permission_role_permission_id_index` (`permission_id`),
+  ADD KEY `permission_role_role_id_index` (`role_id`);
+
+--
+-- Indexes for table `projects`
+--
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `registers`
+--
+ALTER TABLE `registers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `roles_name_unique` (`name`);
+
+--
+-- Indexes for table `settings`
+--
+ALTER TABLE `settings`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `settings_key_unique` (`key`);
+
+--
+-- Indexes for table `teams`
+--
+ALTER TABLE `teams`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `translations`
+--
+ALTER TABLE `translations`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `translations_table_name_column_name_foreign_key_locale_unique` (`table_name`,`column_name`,`foreign_key`,`locale`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`),
+  ADD KEY `users_role_id_foreign` (`role_id`);
+
+--
+-- Indexes for table `user_roles`
+--
+ALTER TABLE `user_roles`
+  ADD PRIMARY KEY (`user_id`,`role_id`),
+  ADD KEY `user_roles_user_id_index` (`user_id`),
+  ADD KEY `user_roles_role_id_index` (`role_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `akhbars`
+--
+ALTER TABLE `akhbars`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `data_rows`
+--
+ALTER TABLE `data_rows`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+
+--
+-- AUTO_INCREMENT for table `data_types`
+--
+ALTER TABLE `data_types`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `faqs`
+--
+ALTER TABLE `faqs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `libraries`
+--
+ALTER TABLE `libraries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `menus`
+--
+ALTER TABLE `menus`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `menu_items`
+--
+ALTER TABLE `menu_items`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `permissions`
+--
+ALTER TABLE `permissions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT for table `projects`
+--
+ALTER TABLE `projects`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `registers`
+--
+ALTER TABLE `registers`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `settings`
+--
+ALTER TABLE `settings`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `teams`
+--
+ALTER TABLE `teams`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `translations`
+--
+ALTER TABLE `translations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `data_rows`
+--
+ALTER TABLE `data_rows`
+  ADD CONSTRAINT `data_rows_data_type_id_foreign` FOREIGN KEY (`data_type_id`) REFERENCES `data_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `menu_items`
+--
+ALTER TABLE `menu_items`
+  ADD CONSTRAINT `menu_items_menu_id_foreign` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `permission_role`
+--
+ALTER TABLE `permission_role`
+  ADD CONSTRAINT `permission_role_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
+
+--
+-- Constraints for table `user_roles`
+--
+ALTER TABLE `user_roles`
+  ADD CONSTRAINT `user_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `user_roles_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;

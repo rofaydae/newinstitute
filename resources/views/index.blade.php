@@ -216,12 +216,12 @@
             </section>
 
             <section>
-                <div class="w-100 pt-100 blue-layer opc7 position-relative" style="height:500px;">
+                <div class="w-100 pt-100 blue-layer opc7 position-relative" style="">
                     <div class="fixed-bg" style="background-image: url('{{asset('images/parallax1.jpg')}}');"></div>
                     <div class="particles-js" id="prtcl"></div>
                     <div class="container">
                         <div class="serv-wrap text-center w-100">
-                            <div class="row res-caro2">
+                            <div class="row res-caro2 pb-80">
                                 <div class="col-md-4 col-sm-6 col-lg-3">
                                     <div class="serv-box2 position-relative overflow-hidden w-100" style="background-image: url('{{asset('images/resources/serv-bg1.jpg')}}');">
                                         <div class="serv-box-inner">
@@ -265,7 +265,7 @@
             </section>
 
             <section>
-                <div class="w-100 pt-210 pb-100 position-relative" style="margin-top:-100px">
+                <div class="w-100 pt-210 pb-100 position-relative" >
                     <div class="container text-right">
                         <div class="sec-title w-100">
                             <div class="sec-title-inner d-inline-block">
@@ -401,11 +401,11 @@
                                         </div>
                                         <div class="toggle-item w-100">
                                             <h4 dir="rtl" class="mb-0">هل يكون التدريس بحسب التخصصات المعهودة في الجامعات ؟</h4>
-                                            <div dir="rtl" class="toggle-content w-100"><p class="mb-0">من الشعب ما نتناوله بحسب ما سبق درسه في الجامعات؛ ومنها ما نستحدثه استحداثا، إما كليا وإما جزئيا: فالمستحدث كليا هو ما لا يكون معروفا باسمه أو بمسائله في الكليات؛ وأما المستحدث جزئيا فيعاد تفكيكه وتركيبه بطريقة لم يسبق أن تنوّل بها. وهذا كله في إطار التجديد العام لهذه العلوم.</p></div>
+                                            <div dir="rtl" class="toggle-content w-100"><p class="mb-0">من الشعب ما نتناوله بحسب ما سبق درسه في الجامعات؛ ومنها ما نستحدثه استحداثا، إما كليا وإما جزئيا: فالمستحدث كليا هو ما لا يكون معروفا باسمه أو بمسائله في الكليات؛ وأما المستحدث جزئيا فيعاد تفكيكه وتركيبه بطريقة لم يسبق أن تنوول بها. وهذا كله في إطار التجديد العام لهذه العلوم.</p></div>
                                         </div>
                                         <div class="toggle-item w-100">
                                             <h4 dir="rtl" class="mb-0">هل لشهادة التخرج من معهد العمرية قيمة علمية معترف بها، أم لا ؟</h4>
-                                            <div dir="rtl" class="toggle-content w-100"><p class="mb-0">نحن لن نشهد للمتخرج من معهدنا بالكفاءة في مجاله بسهولة، وربما سنلجأ إلى اعتماد الميزات في إبراز التراتب بين المتخرجين. وهكذا ستكون لشهادتنا قيمة علمية صرف، يعتبرها من يكون ملتزما للمعايير العلمية. ويتوقع من الجامعات أن تسعى إلى استقطاب هؤلاء المتخرجين ليجددوا لها مقررات التدريس وطرائق العرض وكيفية الاختبار والتقييم. فإن عملت المؤسسات الرسمية بما نقول فهو أفضل لها وللجميع؛ أما إن غلب عليها الجمود المستمر في الأمة منذ قرون، فليس لنا إلا أن ننتظر الأجيال التي ستضطلع لهذه المهمة.</p></div>
+                                            <div dir="rtl" class="toggle-content w-100"><p class="mb-0">نحن لن نشهد للمتخرج من معهدنا بالكفاءة في مجاله بسهولة، وربما سنلجأ إلى اعتماد الميزات في إبراز التراتب بين المتخرجين. وهكذا ستكون لشهادتنا قيمة علمية صرف، يعتبرها من يكون ملتزما للمعايير العلمية. ويتوقع من الجامعات أن تسعى إلى استقطاب هؤلاء المتخرجين ليجددوا لها مقررات التدريس وطرائق العرض وكيفية الاختبار والتقييم. فإن عملت المؤسسات الرسمية بما نقول فهو أفضل لها وللجميع؛ أما إن غلب عليها الجمود المستمر في الأمة منذ قرون، فليس لنا إلا أن ننتظر الأجيال التي ستضطلع بهذه المهمة.</p></div>
                                         </div>
                                         <div class="toggle-item w-100">
                                             <h4 dir="rtl" class="mb-0">هل سيكون التعليم افتراضيا دائما ؟ أم يمكن أن يصير على الأرض</h4>
@@ -422,6 +422,31 @@
                                 </div>
                             </div>
                         </div><!-- Faq Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pb-50 position-relative">
+                    <div class="container">
+                        <div class="clients-wrap w-100">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-7 col-lg-4">
+                                    <div class="client-box w-100">
+                                        <a href="https://www.alomariya.org/" target="_blank" title=""><img style="width: 90px;" class="img-fluid" src="{{asset('images/resources/alomariya-logo.png')}}" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7 col-lg-4">
+                                    <div class="client-box w-100">
+                                        <a href="" target="_blank" title=""><img style="width: 90px;" class="img-fluid" src="{{asset('images/resources/makhbar-logo.png')}}" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7 col-lg-4">
+                                    <div class="client-box w-100">
+                                        <a href="https://alomariyainstitute.org/" target="_blank" title=""><img style="width: 90px;" class="img-fluid" src="{{asset('images/resources/institute-logo.png')}}" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Clients Wrap -->
                     </div>
                 </div>
             </section>
@@ -446,7 +471,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6 col-lg-3 order-lg-1 ">
+                                <!-- <div class="col-md-6 col-sm-6 col-lg-3 order-lg-1 ">
                                     <div class="widget w-100 text-right">
                                         <div class="visitor-stats w-100">
                                             <div class="visitor-stat-box w-100">
@@ -459,7 +484,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-12 col-sm-12 col-lg-6">
                                     <div class="row">
                                         <div class="col-md-4 col-sm-4 col-lg-4">
